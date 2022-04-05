@@ -1,0 +1,59 @@
+#Fungsi Dasar R
+x <- c(3,5,2,8,1,9)
+#Mengurutkan vektor
+sort(x)
+#Mengurutkan vektor dari yang terbesar ke terkecil
+sort(x, decreasing = TRUE)
+#Menghitung selsih dari data Berurutan dalam Vektor dengan Fungsi diff()
+y <- c(100,50,70,80,60)
+diff(y)
+diff(y)* -1
+#Menghitung akar pangkat 2 dalam vektor dengan fungsi sqrt()
+b <- c(4,9,16,25)
+sqrt(b)
+#menampilkan serangkaian bilangan dengan fungsi seq() dan pengulangan serangkaian bilangan dengan fungsi rep()
+seq(from=1, to=10, by=2)
+length(seq(from=2, by=0.5, length.out=4))
+#rep() "repeat" atau mengulang
+rep(1:3,4)
+sort(rep(1:3,4))
+sort(rep(1:3,4), decreasing=TRUE)
+#Membuat Distribusi Frekuensi dan Distribusi Probablitas dengan Fungsi table()
+A <- c(10,10,30,10,30,10,10,40,40,70,90,70,80,60,60,90)
+table(A)
+#Distribusi Probabilitas itu nilainya 12,5
+table(A)/length(A)
+#Fungsi factor() dan Fungsi level() untuk mengetahui Keragaman Data
+level <- c("ikan","ikan","udang","ikan","udang","ikan","ikan","udang")
+factor(level)
+levels(factor(level))
+mode(level)
+#Mengkonversi Vektor Character menjadi Vektor Numeric dengan Fungsi as.numeric()
+as.numeric(level)
+#Membuat Grafik Batang dengan Fungsi Barplot()
+barplot(table(A))
+table(A)
+#Memplot Data dengan Fungsi plot()
+plot(table(A))
+#Mengkonversi Vektor Numeric menjadi Vektor Character dengan fungsi as.character()
+mode(x)
+x <- as.character(x)
+#Mengambil beberapa karakter dengan fungsi substr() dan fungsi substring()
+buah <- c("Mangga","Anggur","Pepaya","Semangka")
+#substr() digunakan untuk ngambil huruf dari depan
+substr(buah, 1,3)
+substr(buah, 1,1)
+#substring() digunakan untuk ngambil huruf dari belakang
+substring(buah,2)
+#abs() digunakan untuk mengubah bilangan negatif jadi positif
+d <- c(-2,3,4,-5,-6)
+abs(d)
+#Fungsi str_replace_all dan Fungsi strsplit()
+#fungsi str_replace_all() digunakan untuk menghapus spasi
+#fungsi strsplit() digunakan untuk memberikan spasi pada angka yang bersifat karakter
+e <- c("1 12 3 34 3 323 2")
+library(stringr)
+str_replace_all(string=e, pattern=" ", repl="")
+strsplit(e, " ")
+
+

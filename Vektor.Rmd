@@ -1,0 +1,51 @@
+---
+output:
+  word_document: default
+  html_document: default
+  pdf_document: default
+---
+#Vektor
+x <- c(5:10)
+x
+#mengganti Elemen Vektor
+x[1]
+x[1] <- 11
+x
+#Memanggil Vektor dengan berbagai cara
+#Memanggil vektor hanya pada indeks 1 dan 3
+x[c(1,3)]
+x[c(2,5)]
+#Memanggil vektor kecuali pada indeks 1,2, 3
+x[-c(1,2,3)]
+#Memanggil vektor hanya pada indeks 3 sampai 6
+x[3:6]
+#Memanggil vektor kecuali pada indeks 3
+x[-3]
+x[c(-3)]
+#This is an error way
+x[-3,-1]
+#Mengetahui Panjang Vektor dengan Fungsi Length()
+length(x)
+#Membuat Vektor dengan fungsi vector()
+C <- vector(length=4)
+length(C)
+mode(C)
+C[1] <- 10
+C[2] <- 9
+C[3] <- 8
+C[4] <- 7
+#Memeriksa tipe data di dalam vektor C
+mode(C)
+#Memberi Nama pada Elemen Vektor dengan Fungsi names()
+names(C) <- c("Sangat Puas","Puas","Cukup Puas","Kurang Puas")
+#Menghapus nama pada elemen vektor
+names(C) <- NULL
+C
+#Mengapus elemen pada indexs ke-2 vektor C
+C <- C[-2]
+C <- C[-c(3,4)]
+#Menambahkan elemen pada indexs selanjutnya
+C[1] <- 2
+C[3] <- 9
+C
+
